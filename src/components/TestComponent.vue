@@ -2,6 +2,7 @@
   import { ref } from 'vue'
   import { useLoop } from '@tresjs/core'
   import type { Mesh } from 'three'
+  import { Edges } from '@tresjs/cientos'
 
   const dieRef = ref<Mesh | null>(null)
 
@@ -26,8 +27,8 @@
     :position="[0, 2, 0]"
   >
     <TresIcosahedronGeometry />
-    <!-- <TresMeshBasicMaterial color="#ff6b35" /> -->
-    <TresMeshNormalMaterial />
+    <TresMeshBasicMaterial color="#ff6b35" />
+    <Edges color="#000000" />
   </TresMesh>
 
   <TresAxesHelper />
