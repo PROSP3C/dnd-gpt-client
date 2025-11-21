@@ -3,6 +3,7 @@
 
 import { defineConfig } from '#q-app/wrappers'
 import { fileURLToPath } from 'node:url'
+import { templateCompilerOptions } from '@tresjs/core'
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -65,7 +66,9 @@ export default defineConfig((/* ctx */) => {
       // distDir
 
       // extendViteConf (viteConf) {},
-      // viteVuePluginOptions: {},
+      viteVuePluginOptions: {
+        ...templateCompilerOptions,
+      },
 
       vitePlugins: [
         [
