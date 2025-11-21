@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { TresCanvas } from '@tresjs/core'
   import TestComponent from '@/components/TestComponent.vue'
+  import { OrbitControls } from '@tresjs/cientos'
 </script>
 
 <template>
@@ -9,5 +10,6 @@
     window-size
   >
     <TestComponent />
+    <OrbitControls />
   </TresCanvas>
 </template>
